@@ -1,11 +1,11 @@
 import json
 
-x = json.load(open('file1.json'))
-y = json.load(open('file2.json'))
+first_file = json.load(open('file1.json'))
+second_file = json.load(open('file2.json'))
 
 
-def run_generate_diff(x, y):
-    print(parse_dict(generate_diff(x, y)))
+def run_generate_diff(first_file, second_file):
+    print(parse_dict(generate_diff(first_file, second_file)))
 
 
 def generate_diff(first_file, second_file):
@@ -26,8 +26,8 @@ def generate_diff(first_file, second_file):
 
 def parse_dict(dictionary):
     sorted_dict = dict(sorted(dictionary.items(), key=lambda x: x[0][2:]))
-    result = json.dumps(sorted_dict, indent=3, separators=('', ': '))
+    result = json.dumps(sorted_dict, indent=2).replace('"',"")
     return result
 
 
-run_generate_diff(x, y)
+run_generate_diff(first_file, second_file)
