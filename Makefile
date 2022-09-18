@@ -1,4 +1,4 @@
-package-install:
+pi:
 	python3 -m pip install --user --force dist/*.whl
 
 install:
