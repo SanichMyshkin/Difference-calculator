@@ -1,5 +1,4 @@
 import json
-import os.path
 
 
 def run_generate_diff(first_file_path: str, second_file_path: str) -> str:
