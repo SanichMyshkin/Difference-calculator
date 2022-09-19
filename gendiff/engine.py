@@ -1,6 +1,7 @@
 import json
 import os.path
 
+
 def run_generate_diff(first_file_path: str, second_file_path: str) -> str:
     first_file = json.load(open(first_file_path))
     second_file = json.load(open(second_file_path))
@@ -29,8 +30,3 @@ def parse_dict(dictionary):
     sorted_dict = dict(sorted(dictionary.items(), key=lambda x: x[0][2:]))
     result = json.dumps(sorted_dict, indent=2).replace('"', "")
     return result
-
-
-run_generate_diff("/home/sanich/python-project-50/gendiff/test/fixtures/file1.json",
-                  "/home/sanich/python-project-50/gendiff/test/fixtures/file2.json")
-
