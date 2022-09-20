@@ -1,3 +1,4 @@
+import pytest
 from gendiff.engine import generate_diff, parse_dict
 
 answer_gen = {'- 1': '1', '  second': '2', '- third': '3', '+ first': '1', '+ third': 3}  # noqa E501
