@@ -9,7 +9,7 @@ def test_generate():
                              "second": "2",
                              "third": "3"},
 
-                                           {"first": "1",
+                            {"first": "1",
                              "second": "2",
                              "third": 3})
     assert res_gen == answer_gen
