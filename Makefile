@@ -16,6 +16,6 @@ test-install:
 test:
 	poetry run pytest
 
-cv:
+test-coverage:
 	poetry run pytest --cov=gendiff --cov-report xml
 
