@@ -29,5 +29,4 @@ def parse_dict(dictionary):
     result = json.dumps(sorted_dict, indent=2).replace('"', "")
     return result
 
-
-#c30716bf386f7d64f64aa6be72917e70df7f54dcde8e640ff9e73db935fc89b7
+# c30716bf386f7d64f64aa6be72917e70df7f54dcde8e640ff9e73db935fc89b7
