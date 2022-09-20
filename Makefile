@@ -9,3 +9,9 @@ build:
 
 lint:
 	poetry run flake8 gendiff
+
+test-install:
+	pip install pytest
+
+test:
+	poetry run pytest

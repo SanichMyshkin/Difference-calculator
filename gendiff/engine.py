@@ -4,7 +4,6 @@ import json
 def run_generate_diff(first_file_path: str, second_file_path: str) -> str:
     first_file = json.load(open(first_file_path))
     second_file = json.load(open(second_file_path))
-
     gendiff = generate_diff(first_file, second_file)
     print(parse_dict(gendiff))
 
