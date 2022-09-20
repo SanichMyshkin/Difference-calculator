@@ -1,4 +1,4 @@
-name: Github Actions
+name: My test and linter chek
 
 on: push
 
