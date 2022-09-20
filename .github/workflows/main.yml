@@ -13,7 +13,6 @@ jobs:
           python-version: 3.8
       - name: install dependencies
         run: |
-          python3 -m pip install . gendiff
           pip install poetry flake8 pytest
           make install
       - name: Run linter
