@@ -1,4 +1,4 @@
-name: GitHub Actions 
+name: Github Actions
 
 on: push
 
@@ -18,9 +18,9 @@ jobs:
       - name: Run linter
         run: make lint
       - name: Run tests
-        run: poetry run pytest
-      - name: Test & publish code coverage
-        uses: paambaati/codeclimate-action@v2.7.4
+        run: make test
+      - name: Code Coverage
+        uses: paambaati/codeclimate-action@v3.0.0
         env:
           CC_TEST_REPORTER_ID: c30716bf386f7d64f64aa6be72917e70df7f54dcde8e640ff9e73db935fc89b7
         with:
