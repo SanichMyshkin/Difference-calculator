@@ -10,6 +10,7 @@ packages = [
 [tool.poetry.dependencies]
 python = "^3.8"
 pytest-cov = "^3.0.0"
+flake8 = "^5.0.4"
 
 [tool.poetry.dev-dependencies]
 pytest = ">=7.1.3"
