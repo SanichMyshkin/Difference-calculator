@@ -19,7 +19,3 @@ def generate_diff(first_file_path, second_file_path):
     result.update({f'+ {key}': item for key, item in second_file.items()})
     sorted_dict = dict(sorted(result.items(), key=lambda x: x[0][2:]))
     return json.dumps(sorted_dict, indent=2).replace('"', "").replace(",", "")
-
-
-print(generate_diff("/home/udo/python-project-50/test/fixtures/file1.json",
-                   "/home/udo/python-project-50/test/fixtures/file2.json"))
