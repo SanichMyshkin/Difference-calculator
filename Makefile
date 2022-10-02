@@ -1,4 +1,4 @@
-pi:
+pi: #package-install
 	python3 -m pip install --user --force dist/*.whl
 
 install:
@@ -10,12 +10,10 @@ build:
 lint:
 	poetry run flake8 gendiff
 
-test-install:
-	pip install pytest
 
 test-coverage:
 	poetry run pytest --cov=gendiff --cov-report xml
 
-pytest:
+run-test:
 	poetry run pytest
 
