@@ -1,9 +1,10 @@
 import json
+from gendiff.parser import parse
 
 
 def generate_diff(first_file_path, second_file_path):
-    first_file = json.load(open(first_file_path))
-    second_file = json.load(open(second_file_path))
+    first_file = parse(first_file_path)
+    second_file = parse(second_file_path)
 
     result = dict()
     for key in first_file.keys():
@@ -19,3 +20,6 @@ def generate_diff(first_file_path, second_file_path):
     result.update({f'+ {key}': item for key, item in second_file.items()})
     sorted_dict = dict(sorted(result.items(), key=lambda x: x[0][2:]))
     return json.dumps(sorted_dict, indent=2).replace('"', "").replace(",", "")
+
+
+#generate_diff("test/fixtures/file1.json", "test/fixtures/file2.yaml")
