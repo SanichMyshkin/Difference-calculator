@@ -6,9 +6,9 @@
 <a href="https://codeclimate.com/github/SanichMakakich/python-project-50/maintainability"><img src="https://api.codeclimate.com/v1/badges/5b982efa6ef170732970/maintainability" /></a>
 <a href="https://codeclimate.com/github/SanichMakakich/python-project-50/test_coverage"><img src="https://api.codeclimate.com/v1/badges/5b982efa6ef170732970/test_coverage" /></a>
 
-# Сравнение двух json файлов и вывод разницы
+# Сравнение двух json и yaml файлов и вывод разницы
 
-<a href="https://asciinema.org/a/Eaj56ccdd5L2ABsm06xOalXH4" target="_blank"><img src="https://asciinema.org/a/Eaj56ccdd5L2ABsm06xOalXH4.svg" /></a>
+<a href="https://asciinema.org/a/ZZXh4KAW3Lv6u0eUTpneYLaIU" target="_blank"><img src="https://asciinema.org/a/ZZXh4KAW3Lv6u0eUTpneYLaIU.svg" /></a>
 
 
 
