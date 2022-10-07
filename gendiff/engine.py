@@ -2,7 +2,7 @@ import json
 from gendiff.parser import parse
 
 
-def generate_diff(first_file_path, second_file_path):
+def generate_diff(first_file_path, second_file_path, formater="stylish"):
     first_file = parse(first_file_path)
     second_file = parse(second_file_path)
 
@@ -21,4 +21,4 @@ def generate_diff(first_file_path, second_file_path):
     sorted_dict = dict(sorted(result.items(), key=lambda x: x[0][2:]))
     return json.dumps(sorted_dict, indent=2).replace('"', "").replace(",", "")
 
-# generate_diff("test/fixtures/file1.json", "test/fixtures/file2.yaml")
+# generate_diff("test/fixtures/flat_file1.json", "test/fixtures/flat_file2.yaml")
