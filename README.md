@@ -8,7 +8,7 @@
 
 # Сравнение двух json и yaml файлов и вывод разницы
 
-<a href="https://asciinema.org/a/ZZXh4KAW3Lv6u0eUTpneYLaIU" target="_blank"><img src="https://asciinema.org/a/ZZXh4KAW3Lv6u0eUTpneYLaIU.svg" /></a>
+<a href="https://asciinema.org/a/Eaj56ccdd5L2ABsm06xOalXH4" target="_blank"><img src="https://asciinema.org/a/Eaj56ccdd5L2ABsm06xOalXH4.svg" /></a>
 
 # Сравнение двух древовидных файлов и вывод разницы
 
