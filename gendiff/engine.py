@@ -1,24 +1,14 @@
-import json
 from gendiff.parser import parse
+from gendiff.difference import diff_tree
+from gendiff.formats.stylish import stylish
 
 
-def generate_diff(first_file_path, second_file_path, formater="stylish"):
+def generate_diff(first_file_path: str, second_file_path: str, formater="stylish"): # noqa E501
     first_file = parse(first_file_path)
     second_file = parse(second_file_path)
+    data_diff = diff_tree(first_file, second_file)
+    if formater == "stylish":
+        return stylish(data_diff)
 
-    result = dict()
-    for key in first_file.keys():
-        if key not in second_file.keys():
-            result[f"- {key}"] = first_file[key]
-
-        elif first_file[key] == second_file[key]:
-            result[f"  {key}"] = second_file.pop(key)
-
-        else:
-            result[f"- {key}"] = first_file[key]
-
-    result.update({f'+ {key}': item for key, item in second_file.items()})
-    sorted_dict = dict(sorted(result.items(), key=lambda x: x[0][2:]))
-    return json.dumps(sorted_dict, indent=2).replace('"', "").replace(",", "")
-
-# generate_diff("test/fixtures/flat_file1.json", "test/fixtures/flat_file2.yaml")
+# print(generate_diff('/home/udo/python-project-50/test/fixtures/tree_file1.yaml',
+#                '/home/udo/python-project-50/test/fixtures/tree_file2.json'))

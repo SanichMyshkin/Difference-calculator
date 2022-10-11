@@ -14,9 +14,6 @@ def test_parse():
         generate_diff('test/fixtures/flat_file1.json', 'test/fixtures/file2.wrong')
 
 
-
-
-
 def test_generate_diff():
     with open('test/fixtures/answer_flat.txt') as answer:
         assert generate_diff(file1_json, file2_yaml) == answer.read()
