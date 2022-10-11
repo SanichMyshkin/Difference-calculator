@@ -10,8 +10,9 @@
 
 <a href="https://asciinema.org/a/ZZXh4KAW3Lv6u0eUTpneYLaIU" target="_blank"><img src="https://asciinema.org/a/ZZXh4KAW3Lv6u0eUTpneYLaIU.svg" /></a>
 
+# Сравнение двух древовидных файлов и вывод разницы
 
-
+<a href="https://asciinema.org/a/9hTicv6v7g9T0dgsUbgH0aF0r" target="_blank"><img src="https://asciinema.org/a/9hTicv6v7g9T0dgsUbgH0aF0r.svg" /></a>
 
 
 ПРИМЕЧАНИЕ ДЛЯ САМОГО СЕБЯ
