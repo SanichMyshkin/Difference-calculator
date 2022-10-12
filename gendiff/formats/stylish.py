@@ -24,7 +24,7 @@ def form(dict, key, depth, sign):
            f" {nested(dict[key], depth + STARTING_INDENT)}"
 
 
-def stylish(diff, depth=0): # noqa C901
+def to_stylish(diff, depth=0): # noqa C901
     lines = ['{']
 
     for element in diff:
@@ -56,7 +56,7 @@ def stylish(diff, depth=0): # noqa C901
 
         if element["operation"] == "nested":
             lines.append(f"{' ' * depth}    {element['key']}:"
-                         f" {stylish(element['value'], depth + STARTING_INDENT)}") # noqa E501
+                         f" {to_stylish(element['value'], depth + STARTING_INDENT)}") # noqa E501
 
     lines.append(f'{" " * depth}}}')
     return "\n".join(lines)

@@ -10,7 +10,7 @@ def form(value):
     return f"'{value}'"
 
 
-def plain(diff, path=""):  # noqa C901
+def to_plain(diff, path=""):  # noqa C901
     lines = list()
     for element in diff:
         current_path = f'{path}{element["key"]}'
@@ -28,7 +28,7 @@ def plain(diff, path=""):  # noqa C901
                          f"to {form(element['new'])}")
 
         if element["operation"] == "nested":
-            new_value = plain(element['value'], f"{current_path}.")
+            new_value = to_plain(element['value'], f"{current_path}.")
             lines.append(f"{new_value}")
 
     return "\n".join(lines)
