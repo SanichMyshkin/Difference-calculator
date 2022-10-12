@@ -14,6 +14,10 @@
 
 <a href="https://asciinema.org/a/9hTicv6v7g9T0dgsUbgH0aF0r" target="_blank"><img src="https://asciinema.org/a/9hTicv6v7g9T0dgsUbgH0aF0r.svg" /></a>
 
+# Вывод формата plain
+
+<a href="https://asciinema.org/a/ic8Br1svrKbMShBefKC9DbVDR" target="_blank"><img src="https://asciinema.org/a/ic8Br1svrKbMShBefKC9DbVDR.svg" /></a>
+
 
 ПРИМЕЧАНИЕ ДЛЯ САМОГО СЕБЯ
     """
