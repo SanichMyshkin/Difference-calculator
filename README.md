@@ -18,10 +18,6 @@
 
 <a href="https://asciinema.org/a/ic8Br1svrKbMShBefKC9DbVDR" target="_blank"><img src="https://asciinema.org/a/ic8Br1svrKbMShBefKC9DbVDR.svg" /></a>
 
+# Вывод диффа в формате json
 
-ПРИМЕЧАНИЕ ДЛЯ САМОГО СЕБЯ
-    """
-    poetry run gendiff -h
-    python3 -m pip install . gendiff
-    gendiff -h 
-    """
+<a href="https://asciinema.org/a/nJADNQ2cBxeUo1bIJzwfbD8U4" target="_blank"><img src="https://asciinema.org/a/nJADNQ2cBxeUo1bIJzwfbD8U4.svg" /></a>
