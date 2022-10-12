@@ -1,5 +1,4 @@
 from gendiff.engine import generate_diff
-from gendiff.parser import parse
 import pytest
 
 file1_json = 'test/fixtures/flat_file1.json'
@@ -27,6 +26,7 @@ def test_gendiff_tree():
 def test_gendiff_plain():
     with open('test/fixtures/answer_tree_plain.txt') as answer:
         assert generate_diff(tree_file1_yaml, tree_file2_json, formater="plain") == answer.read()
+
 
 def test_gendiff_json():
     with open('test/fixtures/answer_tree_json.txt') as answer:
