@@ -22,4 +22,8 @@ def test_generate_diff():
 def test_gendiff_tree():
     with open('test/fixtures/answer_tree.txt') as answer:
         assert generate_diff(tree_file1_yaml, tree_file2_json) == answer.read()
-    # Тесты пока что не проходят, так как я не допили функцию
+
+
+def test_gendiff_plain():
+    with open('test/fixtures/answer_tree_plain.txt') as answer:
+        assert generate_diff(tree_file1_yaml, tree_file2_json, formater="plain") == answer.read()
