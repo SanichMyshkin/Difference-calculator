@@ -1,3 +1,5 @@
+from gendiff.difference import build_ident, out_root
+
 STARTING_INDENT = 4
 
 
@@ -24,39 +26,38 @@ def form(dict, key, depth, sign):
            f" {nested(dict[key], depth + STARTING_INDENT)}"
 
 
-def to_stylish(diff, depth=0): # noqa C901
+def to_stylish(diff, depth=0):  # noqa C901
     lines = ['{']
-
+    diff = out_root(diff)
     for element in diff:
-        if element["operation"] == "same":
+        if element["type"] == "same":
             lines.append(form(
                 element, 'value',
-                depth, "    "
+                depth, build_ident("nothing")
             ))
 
-        if element["operation"] == "add":
+        if element["type"] == "add":
             lines.append(form(
                 element, "new",
-                depth, "  + "
+                depth, build_ident("add")
             ))
 
-        if element["operation"] == "removed" or \
-                element["operation"] == "changed":
-
+        if element["type"] == "removed" or \
+                element["type"] == "changed":
             lines.append(form(
                 element, "old",
-                depth, "  - "
+                depth, build_ident("removed")
             ))
 
-        if element["operation"] == "changed":
+        if element["type"] == "changed":
             lines.append(form(
                 element, "new",
-                depth, "  + "
+                depth, build_ident("add")
             ))
 
-        if element["operation"] == "nested":
+        if element["type"] == "nested":
             lines.append(f"{' ' * depth}    {element['key']}:"
-                         f" {to_stylish(element['value'], depth + STARTING_INDENT)}") # noqa E501
+                         f" {to_stylish(element['children'], depth + STARTING_INDENT)}")  # noqa E501
 
     lines.append(f'{" " * depth}}}')
     return "\n".join(lines)

@@ -1,52 +1,52 @@
 [
     {
         "key": "common",
-        "operation": "nested",
-        "value": [
+        "type": "nested",
+        "children": [
             {
                 "key": "follow",
-                "operation": "add",
+                "type": "add",
                 "new": false
             },
             {
                 "key": "setting1",
-                "operation": "same",
+                "type": "same",
                 "value": "Value 1"
             },
             {
                 "key": "setting2",
-                "operation": "removed",
+                "type": "removed",
                 "old": 200
             },
             {
                 "key": "setting3",
-                "operation": "changed",
+                "type": "changed",
                 "old": true,
                 "new": null
             },
             {
                 "key": "setting4",
-                "operation": "add",
+                "type": "add",
                 "new": "blah blah"
             },
             {
                 "key": "setting5",
-                "operation": "add",
+                "type": "add",
                 "new": {
                     "key5": "value5"
                 }
             },
             {
                 "key": "setting6",
-                "operation": "nested",
-                "value": [
+                "type": "nested",
+                "children": [
                     {
                         "key": "doge",
-                        "operation": "nested",
-                        "value": [
+                        "type": "nested",
+                        "children": [
                             {
                                 "key": "wow",
-                                "operation": "changed",
+                                "type": "changed",
                                 "old": "",
                                 "new": "so much"
                             }
@@ -54,12 +54,12 @@
                     },
                     {
                         "key": "key",
-                        "operation": "same",
+                        "type": "same",
                         "value": "value"
                     },
                     {
                         "key": "ops",
-                        "operation": "add",
+                        "type": "add",
                         "new": "vops"
                     }
                 ]
@@ -68,22 +68,22 @@
     },
     {
         "key": "group1",
-        "operation": "nested",
-        "value": [
+        "type": "nested",
+        "children": [
             {
                 "key": "baz",
-                "operation": "changed",
+                "type": "changed",
                 "old": "bas",
                 "new": "bars"
             },
             {
                 "key": "foo",
-                "operation": "same",
+                "type": "same",
                 "value": "bar"
             },
             {
                 "key": "nest",
-                "operation": "changed",
+                "type": "changed",
                 "old": {
                     "key": "value"
                 },
@@ -93,7 +93,7 @@
     },
     {
         "key": "group2",
-        "operation": "removed",
+        "type": "removed",
         "old": {
             "abc": 12345,
             "deep": {
@@ -103,7 +103,7 @@
     },
     {
         "key": "group3",
-        "operation": "add",
+        "type": "add",
         "new": {
             "deep": {
                 "id": {

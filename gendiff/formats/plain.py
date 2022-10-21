@@ -1,3 +1,6 @@
+from gendiff.formats.stylish import out_root
+
+
 def form(value):
     if isinstance(value, dict):
         return "[complex value]"
@@ -14,21 +17,21 @@ def to_plain(diff, path=""):  # noqa C901
     lines = list()
     for element in diff:
         current_path = f'{path}{element["key"]}'
-        if element["operation"] == "add":
+        if element["type"] == "add":
             lines.append(f"Property '{current_path}' "
                          f"was added with value: "
                          f"{form(element['new'])}")
 
-        if element["operation"] == "removed":
+        if element["type"] == "removed":
             lines.append(f"Property '{current_path}' was removed")
 
-        if element["operation"] == "changed":
+        if element["type"] == "changed":
             lines.append(f"Property '{current_path}'"
                          f" was updated. From {form(element['old'])} "
                          f"to {form(element['new'])}")
 
-        if element["operation"] == "nested":
-            new_value = to_plain(element['value'], f"{current_path}.")
+        if element["type"] == "nested":
+            new_value = to_plain(element['children'], f"{current_path}.")
             lines.append(f"{new_value}")
 
     return "\n".join(lines)
