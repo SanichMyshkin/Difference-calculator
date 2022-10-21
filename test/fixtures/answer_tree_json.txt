@@ -1,116 +1,119 @@
-[
-    {
-        "key": "common",
-        "type": "nested",
-        "children": [
-            {
-                "key": "follow",
-                "type": "add",
-                "new": false
-            },
-            {
-                "key": "setting1",
-                "type": "same",
-                "value": "Value 1"
-            },
-            {
-                "key": "setting2",
-                "type": "removed",
-                "old": 200
-            },
-            {
-                "key": "setting3",
-                "type": "changed",
-                "old": true,
-                "new": null
-            },
-            {
-                "key": "setting4",
-                "type": "add",
-                "new": "blah blah"
-            },
-            {
-                "key": "setting5",
-                "type": "add",
-                "new": {
-                    "key5": "value5"
-                }
-            },
-            {
-                "key": "setting6",
-                "type": "nested",
-                "children": [
-                    {
-                        "key": "doge",
-                        "type": "nested",
-                        "children": [
-                            {
-                                "key": "wow",
-                                "type": "changed",
-                                "old": "",
-                                "new": "so much"
-                            }
-                        ]
-                    },
-                    {
-                        "key": "key",
-                        "type": "same",
-                        "value": "value"
-                    },
-                    {
-                        "key": "ops",
-                        "type": "add",
-                        "new": "vops"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "key": "group1",
-        "type": "nested",
-        "children": [
-            {
-                "key": "baz",
-                "type": "changed",
-                "old": "bas",
-                "new": "bars"
-            },
-            {
-                "key": "foo",
-                "type": "same",
-                "value": "bar"
-            },
-            {
-                "key": "nest",
-                "type": "changed",
-                "old": {
-                    "key": "value"
+{
+    "type": "root",
+    "children": [
+        {
+            "key": "common",
+            "type": "nested",
+            "children": [
+                {
+                    "key": "follow",
+                    "type": "add",
+                    "new": false
                 },
-                "new": "str"
-            }
-        ]
-    },
-    {
-        "key": "group2",
-        "type": "removed",
-        "old": {
-            "abc": 12345,
-            "deep": {
-                "id": 45
-            }
-        }
-    },
-    {
-        "key": "group3",
-        "type": "add",
-        "new": {
-            "deep": {
-                "id": {
-                    "number": 45
+                {
+                    "key": "setting1",
+                    "type": "same",
+                    "value": "Value 1"
+                },
+                {
+                    "key": "setting2",
+                    "type": "removed",
+                    "old": 200
+                },
+                {
+                    "key": "setting3",
+                    "type": "changed",
+                    "old": true,
+                    "new": null
+                },
+                {
+                    "key": "setting4",
+                    "type": "add",
+                    "new": "blah blah"
+                },
+                {
+                    "key": "setting5",
+                    "type": "add",
+                    "new": {
+                        "key5": "value5"
+                    }
+                },
+                {
+                    "key": "setting6",
+                    "type": "nested",
+                    "children": [
+                        {
+                            "key": "doge",
+                            "type": "nested",
+                            "children": [
+                                {
+                                    "key": "wow",
+                                    "type": "changed",
+                                    "old": "",
+                                    "new": "so much"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "key",
+                            "type": "same",
+                            "value": "value"
+                        },
+                        {
+                            "key": "ops",
+                            "type": "add",
+                            "new": "vops"
+                        }
+                    ]
                 }
-            },
-            "fee": 100500
+            ]
+        },
+        {
+            "key": "group1",
+            "type": "nested",
+            "children": [
+                {
+                    "key": "baz",
+                    "type": "changed",
+                    "old": "bas",
+                    "new": "bars"
+                },
+                {
+                    "key": "foo",
+                    "type": "same",
+                    "value": "bar"
+                },
+                {
+                    "key": "nest",
+                    "type": "changed",
+                    "old": {
+                        "key": "value"
+                    },
+                    "new": "str"
+                }
+            ]
+        },
+        {
+            "key": "group2",
+            "type": "removed",
+            "old": {
+                "abc": 12345,
+                "deep": {
+                    "id": 45
+                }
+            }
+        },
+        {
+            "key": "group3",
+            "type": "add",
+            "new": {
+                "deep": {
+                    "id": {
+                        "number": 45
+                    }
+                },
+                "fee": 100500
+            }
         }
-    }
-]
+    ]
+}

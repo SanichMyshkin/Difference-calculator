@@ -15,6 +15,7 @@ def form(value):
 
 def to_plain(diff, path=""):  # noqa C901
     lines = list()
+    diff = out_root(diff)
     for element in diff:
         current_path = f'{path}{element["key"]}'
         if element["type"] == "add":

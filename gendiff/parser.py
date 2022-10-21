@@ -14,4 +14,4 @@ def parse(data, format):
         return json.load(data)
     if format == ".yaml" or ".yml":
         return yaml.safe_load(data)
-    raise ValueError(f"{fotmat} - format not supported")
+    raise ValueError(f"{format} - format not supported")
