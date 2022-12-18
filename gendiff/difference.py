@@ -60,4 +60,3 @@ def build_ident(sign: str):
         "nothing": " "
     }
     return f'{space * 2}{data_dict[sign]}{space}'
-
