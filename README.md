@@ -4,9 +4,26 @@
 <a href="https://codeclimate.com/github/SanichMakakich/python-project-50/maintainability"><img src="https://api.codeclimate.com/v1/badges/5b982efa6ef170732970/maintainability" /></a>
 <a href="https://codeclimate.com/github/SanichMakakich/python-project-50/test_coverage"><img src="https://api.codeclimate.com/v1/badges/5b982efa6ef170732970/test_coverage" /></a>
 
-# Сравнение двух json и yaml файлов и вывод разницы
+# Подробнее о проекте
 
-<a href="https://asciinema.org/a/Eaj56ccdd5L2ABsm06xOalXH4" target="_blank"><img src="https://asciinema.org/a/Eaj56ccdd5L2ABsm06xOalXH4.svg" /></a>
+Программа для сравнения двух файлов и вывода разницы.
+
+Поддержка форматов  JSON и YAML.
+
+Клонирование репозитория
+```
+$ git clone git@github.com:SanichMakakich/Difference-calculator.git
+```
+Установка зависимостей
+```
+$ make install
+```
+
+# Использование
+
+```
+$ gendiff [-h] [-f FORMAT] first_file second_file
+```
 
 # Сравнение двух древовидных файлов и вывод разницы
 
